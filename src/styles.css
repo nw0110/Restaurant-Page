@@ -1,0 +1,192 @@
+/* Using CSS resets from https://www.joshwcomeau.com/css/custom-css-reset/
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+    */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* End of copy-paste CSS resets*/
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Danfo&family=Kablammo&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: 'red_burgerregular';
+    src: url('red_burger-webfont.woff2') format('woff2'),
+         url('red_burger-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+:root {
+    --accent-color: #910000;
+    --text-on-accent-color: #ebebeb;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Roboto, "Times New Roman", sans-serif;
+    background-color: rgb(44, 44, 44);
+    color: var(--text-on-accent-color);
+}
+
+h1 {
+    font-size: 2.8rem;
+    background-color: var(--accent-color);
+    padding: 24px 64px;
+    border-radius: 16px;
+    font-family: red_burgerregular, "Times New Roman", sans-serif;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+header {
+    width: 100vw;
+    padding: 24px;
+    background-color: rgb(31, 31, 31);
+    border-bottom: 4px solid var(--accent-color);
+    position: sticky;
+    top: 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+button.tab-btn {
+    background-color: var(--accent-color);
+    color: var(--text-on-accent-color);
+    font-size: 1.5rem;
+    padding: 8px 24px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+#content {
+    width: 60vw;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    margin: 24px;;
+}
+
+button.active{
+    background-color: white;
+    color: var(--accent-color);
+}
+
+.menu-items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    gap: 24px;
+}
+
+.menu-items > div {
+    display: flex;
+    flex-direction: column;
+}
+
+hr {
+    grid-column: 1/3;
+}
+
+.menu-items > div p {
+    font-size: 1rem;
+}
+
+.price {
+    text-align: right;
+}
+
+.menu-items h2 {
+    margin-top: 32px;
+    grid-column: 1/3;
+    border-bottom: 5px solid var(--accent-color);
+}
+
+.contact-details {
+    width: 40%;
+    align-self: flex-start;
+}
+
+.contact-details > div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+}
+
+.contact-details > div > h2 {
+    font-size: 1.5rem;
+}
